@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('firstname', 50);
             $table->string('identifiant')->unique();
             $table->string('password');
+            $table->boolean('active')->default(0);
             $table->timestamps();
         });
 

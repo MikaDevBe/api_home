@@ -20,13 +20,8 @@ class UserController extends Controller
  * 
  */
   public function show(Request $request): UserResource
-{
-    // Sanctum a déjà authentifié l'utilisateur via le token
-    // $request->user() contient l'utilisateur connecté
-    // C'est le MÊME utilisateur que celui du login
-    
-    $user = $request->user(); // ← User avec id, name, identifiant, etc.
-    
+  {      
+    $user = $request->user();
     return new UserResource($user->load('profile'));
-}
+  }
 }

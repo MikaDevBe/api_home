@@ -134,7 +134,7 @@ class AuthController extends Controller
                 return response()->json([
                     'status'        => true,
                     'message'       => 'Vous êtes deconnecté maintenant',
-                ]);
+                ], 200);
             }
 
             return response()->json([

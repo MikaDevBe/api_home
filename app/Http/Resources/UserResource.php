@@ -26,7 +26,7 @@ class UserResource extends JsonResource
           'town' => $this->profile->town ?? null,
           'postalCode' => $this->profile->postal_code ?? null,
           'country' => $this->profile->country ?? null,
-          //'image' => $this->profile->image ? asset('storage/' . $this->profile->image) : null,*/
+          'image' => $this->profile->image ? asset('storage/profiles/' . $this->profile->image) : null,
         ];
     }
 }
